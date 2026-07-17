@@ -419,8 +419,8 @@ Gracias por acompañarnos en este momento tan especial pero, sobre todo, por vue
 
 
 <div class="time-box">
-<span id="dias">0</span>
-<small>dias</small>
+<span id="days">0</span>
+<small>days</small>
 </div>
 
 
@@ -1076,15 +1076,15 @@ function actualizarCuentaAtras() {
   const diferencia = fechaBoda - ahora;
 
   if (diferencia <= 0) {
-    document.getElementById("dias").innerHTML = "0";
+    document.getElementById("days").innerHTML = "0";
     
     return;
   }
 
-  const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+  const days = Math.floor(diferencia / (1000 * 60 * 60 * 24));
   
 
-  document.getElementById("dias").innerHTML = dias;
+  document.getElementById("days").innerHTML = days;
   
 }
 
@@ -1102,7 +1102,7 @@ function actualizarCuenta(){
 
     if(diferencia < 0){
 
-        document.getElementById("dias").innerHTML="0";
+        document.getElementById("days").innerHTML="0";
         
 
         return;
@@ -1110,7 +1110,7 @@ function actualizarCuenta(){
     }
 
 
-    const dias = Math.floor(
+    const days = Math.floor(
         diferencia /
         (1000 * 60 * 60 * 24)
     );
@@ -1120,7 +1120,7 @@ function actualizarCuenta(){
 
 
 
-    document.getElementById("dias").innerHTML=dias;
+    document.getElementById("days").innerHTML=days;
 
     
 
