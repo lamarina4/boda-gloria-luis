@@ -6,226 +6,441 @@
 
 <title>Gloria & Luis | 12 Septiembre 2026</title>
 
-<link href="https://fontst+Garamond:wght@300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
---marfil:#f8f5ef;
---dorado:#b89b72;
---texto:#4e443b;
---detalle:#80625d;
+    --marfil:#f8f5ef;
+    --dorado:#b89b72;
+    --texto:#4e443b;
+    --detalle:#80625d;
 }
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-font-family:'Cormorant Garamond',serif;
-background:var(--marfil);
-color:var(--texto);
-overflow-x:hidden;
+    font-family:'Cormorant Garamond', serif;
+    background:var(--marfil);
+    color:var(--texto);
+    overflow-x:hidden;
 }
 
 .hero{
-height:100vh;
-position:relative;
-overflow:hidden;
+    height:100vh;
+    position:relative;
+    overflow:hidden;
 }
 
 .hero img{
-width:100%;
-height:100%;
-object-fit:cover;
-animation:zoomHero 25s ease-in-out infinite alternate;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    animation:zoomHero 25s ease-in-out infinite alternate;
 }
 
 .hero::after{
-content:"";
-position:absolute;
-inset:0;
-background:rgba(0,0,0,.30);
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.35);
 }
 
 .hero-content{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-text-align:center;
-color:white;
-z-index:2;
-width:90%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+    z-index:2;
+    width:90%;
 }
 
 .hero-content h1{
-font-family:'Parisienne',cursive;
-font-size:6rem;
-font-weight:400;
+    font-family:'Parisienne', cursive;
+    font-size:6rem;
+    font-weight:400;
 }
 
 .hero-content p{
-letter-spacing:4px;
-text-transform:uppercase;
+    letter-spacing:4px;
+    text-transform:uppercase;
 }
 
 section{
-padding:90px 25px;
+    padding:90px 25px;
 }
 
 .container{
-max-width:1100px;
-margin:auto;
+    max-width:1100px;
+    margin:auto;
 }
 
 .intro{
-text-align:center;
+    text-align:center;
 }
 
 .intro p{
-max-width:900px;
-margin:auto;
-font-size:1.8rem;
-line-height:1.7;
+    max-width:900px;
+    margin:auto;
+    font-size:1.8rem;
+    line-height:1.8;
 }
 
 h2{
-text-align:center;
-font-size:3rem;
-margin-bottom:50px;
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:50px;
+    font-weight:500;
 }
 
 .countdown{
-display:flex;
-justify-content:center;
-gap:25px;
-flex-wrap:wrap;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
 }
 
 .timebox{
-background:white;
-padding:25px;
-border-radius:12px;
-min-width:130px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-text-align:center;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    min-width:140px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
 .timebox span{
-display:block;
-font-size:3rem;
-color:var(--dorado);
+    display:block;
+    font-size:3rem;
+    color:var(--dorado);
 }
 
 .gallery{
-max-width:900px;
-margin:auto;
+    max-width:900px;
+    margin:auto;
 }
 
 .gallery img{
-width:100%;
-border-radius:12px;
-box-shadow:0 15px 40px rgba(0,0,0,.15);
+    width:100%;
+    border-radius:12px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
 }
 
 .event{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-margin-bottom:80px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+    margin-bottom:80px;
 }
 
 .event img{
-width:100%;
-border-radius:10px;
-box-shadow:0 15px 30px rgba(0,0,0,.12);
+    width:100%;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
 .event h3{
-font-size:2.5rem;
-margin-bottom:15px;
+    font-size:2.5rem;
+    margin-bottom:20px;
 }
 
 .event p{
-font-size:1.4rem;
+    font-size:1.4rem;
+    line-height:1.5;
 }
 
 .buttons{
-text-align:center;
+    text-align:center;
 }
 
 .btn{
-display:inline-block;
-margin:10px;
-padding:15px 30px;
-border-radius:40px;
-text-decoration:none;
-color:white;
-font-size:1.2rem;
-transition:.3s;
+    display:inline-block;
+    margin:10px;
+    padding:16px 32px;
+    border-radius:40px;
+    text-decoration:none;
+    color:white;
+    font-size:1.2rem;
+    transition:.3s;
 }
 
 .btn:hover{
-transform:translateY(-3px);
+    transform:translateY(-3px);
 }
 
 .gold{
-background:var(--dorado);
+    background:var(--dorado);
 }
 
 .green{
-background:#25D366;
+    background:#25D366;
 }
 
 .music-btn{
-background:var(--detalle);
-border:none;
-cursor:pointer;
+    border:none;
+    cursor:pointer;
+    background:var(--detalle);
 }
 
 .closing{
-background:white;
-text-align:center;
+    background:white;
+    text-align:center;
 }
 
 .closing p{
-font-size:2rem;
-max-width:800px;
-margin:auto;
+    font-size:2rem;
+    max-width:900px;
+    margin:auto;
 }
 
 .signature{
-margin-top:20px;
-font-family:'Parisienne',cursive;
-font-size:4rem;
-color:var(--detalle);
+    margin-top:25px;
+    font-family:'Parisienne', cursive;
+    font-size:4rem;
+    color:var(--detalle);
 }
 
 footer{
-padding:40px;
-text-align:center;
-color:#777;
+    text-align:center;
+    padding:40px;
+    color:#777;
 }
 
 .fade{
-opacity:0;
-transform:translateY(30px);
-transition:1s;
+    opacity:0;
+    transform:translateY(30px);
+    transition:1s;
 }
 
 .fade.visible{
-opacity:1;
-transform:none;
+    opacity:1;
+    transform:none;
 }
 
 @keyframes zoomHero{
-from{transform:scale(1);}
-to{transform:scale(1.08);}
+    from{transform:scale(1);}
+    to{transform:scale(1.08);}
 }
 
 @media(max-width:768px){
+
+    .hero-content h1{
+        font-size:4rem;
+    }
+
+    .event{
+        grid-template-columns:1fr;
+    }
+
+    .intro p{
+        font-size:1.4rem;
+    }
+
+    .signature{
+        font-size:3rem;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+
+    fotos/foto1.jpg" alt="Gloria y Luis">
+
+    <div class="hero-content">
+        <h1>Gloria & Luis</h1>
+        <p>12 de septiembre de 2026</p>
+    </div>
+
+</header>
+
+<section class="intro fade">
+
+    <div class="container">
+
+        <p>
+            ¡Ya queda menos! Por fin se acerca la fecha tan ansiada.
+            Con este mensaje os queremos recordar el día y el lugar del evento.
+            No vemos la hora de compartir con vosotros uno de los días más importantes de nuestra vida.
+            Gracias por estar ahí, por vuestro apoyo y cariño.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="fade">
+
+    <h2>Cuenta atrás</h2>
+
+    <div id="countdown" class="countdown"></div>
+
+</section>
+
+<section class="fade">
+
+    <h2>Nuestra historia</h2>
+
+    <div class="gallery">
+        oto1.jpg" alt="Galería">
+    </div>
+
+</section>
+
+<section class="container fade">
+
+    <div class="event">
+
+        fotos/foto2.jpg="Ceremonia">
+
+        <div>
+            <h3>Ceremonia</h3>
+            <p>Ayuntamiento de Sant Josep de sa Talaia</p>
+            <p>Ibiza</p>
+        </div>
+
+    </div>
+
+    <div class="event">
+
+        <div>
+            <h3>Celebración</h3>
+            <p>Restaurante Balneari</p>
+            <p>Cala Carbó</p>
+            <p>Sant Josep de sa Talaia</p>
+        </div>
+
+        fotos/foto3.jpg
+
+    </div>
+
+</section>
+
+<section class="fade">
+
+    <h2>Localizaciones</h2>
+
+    <div class="buttons">
+
+        <a class="btn gold"
+           href="https://maps.google.com/?q=Ayuntamiento+Sant+Josep+de+sa+Talaia"
+           target="_blank">
+            Ver ceremonia
+        </a>
+
+        =Restaurante+Balneari+Cala+Carbo"
+           target="_blank">
+            Ver celebración
+        </a>
+
+    </div>
+
+</section>
+
+<section class="buttons fade">
+
+    <a class="btn green"
+       href="https://wa.me/34640312456?text=Confirmamos%20nuestra%20asistencia%20a%20la%20boda%20de%20Gloria%20y%20Luis"
+       target="_blank">
+        Confirmar asistencia
+    </a>
+
+    <br>
+
+    <button class="btn music-btn" onclick="toggleMusic()">
+        Música
+    </button>
+
+    <audio id="music" loop>
+        Paolo Nutini - Candy - Isle of Wight Festival 2015 - Live.mp3" type="audio/mpeg">
+    </audio>
+
+</section>
+
+<section class="closing fade">
+
+    <div class="container">
+
+        <p>
+            Será un honor compartir este día tan especial con vosotros.
+        </p>
+
+        <div class="signature">
+            Gloria & Luis
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    12 · 09 · 2026
+</footer>
+
+<script>
+
+const weddingDate = new Date("2026-09-12T12:00:00");
+
+function updateCountdown(){
+
+    const now = new Date();
+    const diff = weddingDate - now;
+
+    const d = Math.floor(diff/(1000*60*60*24));
+    const h = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+    const m = Math.floor((diff%(1000*60*60))/(1000*60));
+
+    document.getElementById("countdown").innerHTML = `
+        <div class="timebox"><span>${d}</span>Días</div>
+        <div class="timebox"><span>${h}</span>Horas</div>
+        <div class="timebox"><span>${m}</span>Minutos</div>
+    `;
+}
+
+updateCountdown();
+setInterval(updateCountdown,1000);
+
+const fotos = [
+    "fotos/foto1.jpg",
+    "fotos/foto2.jpg",
+    "fotos/foto3.jpg",
+    "fotos/foto4.jpg",
+    "fotos/foto5.jpg",
+    "fotos/foto6.jpg",
+    "fotos/foto7.jpg",
+    "fotos/foto8.jpg",
+    "fotos/foto9.jpg",
+    "fotos/foto10.jpg",
+    "fotos/foto11.jpg",
+    "fotos/foto12.jpg",
+    "fotos/foto13.jpg"
+];
+
+let actual = 0;
+
+setInterval(() => {
+
+    actual++;
+
+    if(actual >= fotos.length){
+        actual = 0;
+    }
+
+    document.getElementById("galleryImage").src = fotos[actual];
+
+}, 4000);
+
+function toggleMusic(){
+
+    const music = document.getElementById("music");
 
