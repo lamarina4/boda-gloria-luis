@@ -1079,14 +1079,39 @@ Nos vemos en Ibiza
 
 
 const fechaBoda = new Date(
-    const fechaBoda = new Date(
-    2026,
-    8,      // septiembre (los meses empiezan en 0: enero=0)
-    12,
-    12,
-    30,
-    0
+  2026,
+  8,
+  12,
+  12,
+  30,
+  0
 ).getTime();
+
+function actualizarCuentaAtras() {
+  const ahora = new Date().getTime();
+  const diferencia = fechaBoda - ahora;
+
+  if (diferencia <= 0) {
+    document.getElementById("dias").innerHTML = "0";
+    document.getElementById("horas").innerHTML = "0";
+    document.getElementById("minutos").innerHTML = "0";
+    document.getElementById("segundos").innerHTML = "0";
+    return;
+  }
+
+  const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+  const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+  const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+  document.getElementById("dias").innerHTML = dias;
+  document.getElementById("horas").innerHTML = horas;
+  document.getElementById("minutos").innerHTML = minutos;
+  document.getElementById("segundos").innerHTML = segundos;
+}
+
+actualizarCuentaAtras();
+setInterval(actualizarCuentaAtras, 1000);
 
 
 
