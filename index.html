@@ -1,251 +1,301 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gloria & Luis · 12 de septiembre de 2026</title>
 
-<title>Gloria & Luis | 12 Septiembre 2026</title>
+<!--
+=========================================================
+PROYECTO PARA GITHUB PAGES
 
-https://fonts.googleapis.com
-https://fonts.gstatic.com
+Estructura recomendada:
 
-https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Parisienne&display=swap
+boda-gloria-luis/
+│
+├── index.html
+├── musica/
+│      └── Paolo Nutini - Candy.mp3
+└── fotos/
+       ├── foto1.jpg
+       ├── foto2.jpg
+       ├── ...
+       └── foto13.jpg
+
+IMPORTANTE
+
+La ruta local:
+C:\Users\lamarina\Desktop\boda-gloria-luis
+
+NO puede utilizarse dentro del HTML de GitHub Pages.
+
+Las imágenes se cargan mediante:
+fotos/foto1.jpg
+...
+
+La música mediante:
+musica/Paolo Nutini - Candy.mp3
+
+=========================================================
+-->
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
-:root{
- --marfil:#F7F3EE;
- --blanco:#FFFFFF;
- --texto:#453C35;
- --dorado:#B8A07A;
- --gris:#6D645D;
-}
-
 *{
- margin:0;
- padding:0;
- box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
- font-family:'Cormorant Garamond',serif;
- background:var(--marfil);
- color:var(--texto);
- overflow-x:hidden;
+
+font-family:Montserrat,sans-serif;
+
+background:linear-gradient(180deg,#f9f7f3,#ffffff);
+
+color:#444;
+
+line-height:1.7;
+
 }
 
-h1,h2,h3{
- font-weight:400;
+header{
+
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+background:
+linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.85)),
+url("fotos/foto1.jpg") center/cover no-repeat;
+
 }
 
-.hero{
- height:100vh;
- position:relative;
- overflow:hidden;
+header h1{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:70px;
+
+font-weight:300;
+
+letter-spacing:5px;
+
+color:#6f5d43;
+
 }
 
-.hero img{
- width:100%;
- height:100%;
- object-fit:cover;
- animation:kenburns 20s ease-in-out infinite alternate;
+header h2{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:34px;
+
+font-weight:300;
+
+margin-top:15px;
+
 }
 
-.overlay{
- position:absolute;
- inset:0;
- background:rgba(0,0,0,.25);
+header p{
+
+margin-top:20px;
+
+font-size:18px;
+
+max-width:700px;
+
 }
 
-.hero-content{
- position:absolute;
- inset:0;
- display:flex;
- flex-direction:column;
- justify-content:center;
- align-items:center;
- text-align:center;
- color:white;
- padding:20px;
+section{
+
+max-width:1100px;
+
+margin:auto;
+
+padding:80px 25px;
+
 }
 
-.hero-content h1{
- font-family:'Parisienne',cursive;
- font-size:6rem;
+.titulo{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:50px;
+
+color:#8b6b3f;
+
+margin-bottom:30px;
+
+text-align:center;
+
 }
 
-.hero-content p{
- letter-spacing:4px;
- text-transform:uppercase;
+.detalles{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:35px;
+
 }
 
-.section{
- max-width:1100px;
- margin:auto;
- padding:100px 25px;
+.card{
+
+background:white;
+
+padding:35px;
+
+border-radius:18px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
 }
 
-.intro{
- text-align:center;
- font-size:2rem;
- max-width:800px;
- margin:auto;
+.card h3{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:34px;
+
+margin-bottom:15px;
+
+color:#7b5b36;
+
 }
 
-.date{
- background:white;
- text-align:center;
+.card p{
+
+margin-bottom:10px;
+
 }
 
-.date h2{
- font-size:3rem;
+.boton{
+
+display:inline-block;
+
+margin-top:18px;
+
+padding:12px 22px;
+
+background:#8b6b3f;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:30px;
+
+transition:.3s;
+
 }
 
-.date p{
- font-size:1.8rem;
+.boton:hover{
+
+background:#6f5331;
+
 }
 
-.countdown{
- display:flex;
- justify-content:center;
- flex-wrap:wrap;
- gap:30px;
- margin-top:40px;
+.galeria{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:18px;
+
 }
 
-.count-item{
- background:white;
- padding:25px;
- min-width:130px;
- border-radius:10px;
- box-shadow:0 10px 25px rgba(0,0,0,.08);
+.galeria img{
+
+width:100%;
+
+height:260px;
+
+object-fit:cover;
+
+border-radius:14px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+transition:.4s;
+
+cursor:pointer;
+
 }
 
-.count-item span{
- display:block;
- font-size:3rem;
+.galeria img:hover{
+
+transform:scale(1.03);
+
 }
 
-.gallery{
- padding:80px 20px;
- text-align:center;
+footer{
+
+padding:70px 20px;
+
+text-align:center;
+
+background:#f3efe8;
+
 }
 
-.gallery-container{
- max-width:900px;
- margin:auto;
+footer h2{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:46px;
+
+font-weight:300;
+
+color:#7a5d3d;
+
+margin-bottom:20px;
+
 }
 
-.gallery-image{
- width:100%;
- border-radius:8px;
- box-shadow:0 15px 40px rgba(0,0,0,.12);
- transition:opacity .8s ease;
+audio{
+
+width:100%;
+
+max-width:450px;
+
+margin-top:20px;
+
 }
 
-.info-block{
- display:grid;
- grid-template-columns:1fr 1fr;
- gap:50px;
- align-items:center;
- margin-top:80px;
+@media(max-width:700px){
+
+header h1{
+
+font-size:48px;
+
 }
 
-.info-block img{
- width:100%;
- border-radius:8px;
- box-shadow:0 15px 40px rgba(0,0,0,.12);
+header h2{
+
+font-size:26px;
+
 }
 
-.info-text h3{
- font-size:2.5rem;
- margin-bottom:15px;
+.titulo{
+
+font-size:40px;
+
 }
-
-.info-text p{
- font-size:1.5rem;
-}
-
-.actions{
- text-align:center;
- padding:100px 20px;
-}
-
-.btn{
- display:inline-block;
- margin:10px;
- padding:15px 28px;
- border-radius:40px;
- text-decoration:none;
- color:white;
- background:var(--dorado);
- transition:.3s;
-}
-
-.btn:hover{
- transform:translateY(-3px);
-}
-
-.music{
- text-align:center;
- margin-top:30px;
-}
-
-.music button{
- border:none;
- cursor:pointer;
- padding:15px 30px;
- background:#7c6e62;
- color:white;
- border-radius:30px;
-}
-
-.closing{
- background:white;
- text-align:center;
- padding:120px 20px;
-}
-
-.signature{
- font-family:'Parisienne',cursive;
- font-size:4rem;
- margin-top:30px;
- color:var(--dorado);
-}
-
-.footer{
- text-align:center;
- padding:40px;
- color:#777;
-}
-
-@keyframes kenburns{
- from{
-  transform:scale(1);
- }
- to{
-  transform:scale(1.08);
- }
-}
-
-@media(max-width:768px){
-
- .hero-content h1{
-  font-size:4rem;
- }
-
- .info-block{
-  grid-template-columns:1fr;
- }
-
- .intro{
-  font-size:1.5rem;
- }
-
- .count-item{
-  min-width:100px;
- }
 
 }
 
@@ -255,270 +305,124 @@ h1,h2,h3{
 
 <body>
 
-<header class="hero">
-
-fotos/portada.jpg" alt="Portada">
-
-<div class="overlay"></div>
-
-<div class="hero-content">
+<header>
 
 <h1>Gloria & Luis</h1>
 
-<p>Invitación de boda</p>
+<h2>12 de septiembre de 2026</h2>
 
-</div>
+<p>
+
+¡Ya queda menos! Por fin se acerca la fecha tan ansiada. Con este mensaje os queremos recordar el día, hora y lugar del evento. No vemos el momento de compartir con vosotros uno de los días más importantes de nuestra vida.
+ 
+Gracias por acompañarnos en esta celebración en la maravillosa isla de Ibiza pero, sobre todo, por vuestro apoyo y cariño.
+
+
+</p>
 
 </header>
 
-<section class="section">
+<section>
 
-<div class="intro">
+<h2 class="titulo">La ceremonia</h2>
 
-¡Ya queda menos! Por fin se acerca la fecha tan ansiada. Con este mensaje os queremos recordar el día y el lugar del evento. No vemos la hora de compartir con vosotros uno de los días más importantes de nuestra vida. Gracias por estar ahí, por vuestro apoyo y cariño.
+<div class="detalles">
 
-</div>
+<div class="card">
 
-</section>
+<h3>Ayuntamiento de Sant Josep de sa Talaia</h3>
 
-<section class="section date">
+<p><strong>Fecha:</strong> 12 de septiembre de 2026</p>
 
-<h2>12 de septiembre de 2026</h2>
+<p><strong>Hora:</strong> 12:30</p>
 
-<p>Sant Josep de sa Talaia · Ibiza</p>
+<p>Ayuntamiento de Sant Josep de sa Talaia (Ibiza).</p>
 
-</section>
-
-<section class="section">
-
-<h2 style="text-align:center;font-size:3rem;">
-Cuenta atrás
-</h2>
-
-<div id="countdown" class="countdown"></div>
-
-</section>
-
-<section class="gallery">
-
-<h2 style="font-size:3rem;margin-bottom:40px;">
-Nuestra Historia
-</h2>
-
-<div class="gallery-container">
-
-fotos/foto1.jpg
-
-</div>
-
-</section>
-
-<section class="section">
-
-<div class="info-block">
-
-fotos/foto2.jpg
-
-<div class="info-text">
-
-<h3>Ceremonia</h3>
-
-<p>
-Ayuntamiento de Sant Josep de sa Talaia
-</p>
-
-<p>
-Ibiza
-</p>
-
-<br>
-
-/?q=Ayuntamiento+de+Sant+Josep+de+sa+Talaia">
-Ver ubicación
+<a class="boton"
+target="_blank"
+href="https://maps.google.com/?q=Ajuntament+de+Sant+Josep+de+sa+Talaia+Ibiza">
+Ver en Google Maps
 </a>
 
 </div>
 
-</div>
-
-<div class="info-block">
-
-<div class="info-text">
+<div class="card">
 
 <h3>Celebración</h3>
 
 <p>
-Restaurante Balneari
+
+Después de la ceremonia celebraremos el convite junto al mar en el
+
+<strong>Restaurante Balneari</strong>,
+
+en Cala Carbó,
+
+Sant Josep de sa Talaia.
+
 </p>
 
-<p>
-Cala Carbó
-</p>
+<a class="boton"
+target="_blank"
+href="https://maps.google.com/?q=Restaurante+Balneari+Cala+Carbo+Ibiza">
+Ver en Google Maps
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="titulo">Nuestros recuerdos</h2>
+
+<div class="galeria">
+
+<img src="fotos/foto1.jpg" alt="">
+<img src="fotos/foto2.jpg" alt="">
+<img src="fotos/foto3.jpg" alt="">
+<img src="fotos/foto4.jpg" alt="">
+<img src="fotos/foto5.jpg" alt="">
+<img src="fotos/foto6.jpg" alt="">
+<img src="fotos/foto7.jpg" alt="">
+<img src="fotos/foto8.jpg" alt="">
+<img src="fotos/foto9.jpg" alt="">
+<img src="fotos/foto10.jpg" alt="">
+<img src="fotos/foto11.jpg" alt="">
+<img src="fotos/foto12.jpg" alt="">
+<img src="fotos/foto13.jpg" alt="">
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>Os esperamos</h2>
 
 <p>
-Sant Josep de sa Talaia
+
+Será un honor celebrar este día tan especial junto a vosotros.
+
 </p>
 
 <br>
 
-https://maps.google.com/?q=Restaurante+Balneari+Cala+Carbo
+<p><strong>Gloria & Luis</strong></p>
 
-</div>
+<br>
 
-fotos/foto3.jpgCelebración">
+<audio controls autoplay loop>
 
-</div>
+<source src="musica/Paolo Nutini - Candy.mp3" type="audio/mpeg">
 
-</section>
+Tu navegador no soporta audio HTML5.
 
-<section class="actions">
-
-<h2 style="font-size:3rem;">
-Confirmación
-</h2>
-
-<br><br>
-
-Confirmamos%20nuestra%20asistencia%20a%20la%20boda%20de%20Gloria%20y%20Luis">
-Confirmar asistencia
-</a>
-
-<a
-class="btn"
-target="_blank"
-href="https://calendar.google.com/calendar/render?action=TEMPLATE12T120000/20260912T230000
-Añadir al calendario
-</a>
-
-<div class="music">
-
-<button onclick="toggleMusic()">
-Activar música
-</button>
-
-</div>
-
-</section>
-
-<section class="closing">
-
-<h2>
-Será un honor compartir este día tan especial con vosotros.
-</h2>
-
-<div class="signature">
-Gloria & Luis
-</div>
-
-</section>
-
-<footer class="footer">
-
-12 · 09 · 2026
-
-</footer>
-
-<audio id="music" loop>
-musica.mp3" type="audio/mpeg">
 </audio>
 
-<script>
-
-const weddingDate =
-new Date("2026-09-12T12:00:00");
-
-function updateCountdown(){
-
- const now = new Date();
-
- const diff = weddingDate - now;
-
- const days =
- Math.floor(diff/(1000*60*60*24));
-
- const hours =
- Math.floor(
- (diff%(1000*60*60*24))
- /(1000*60*60)
- );
-
- const minutes =
- Math.floor(
- (diff%(1000*60*60))
- /(1000*60)
- );
-
- document.getElementById("countdown").innerHTML = `
- <div class="count-item">
- <span>${days}</span>
- Días
- </div>
-
- <div class="count-item">
- <span>${hours}</span>
- Horas
- </div>
-
- <div class="count-item">
- <span>${minutes}</span>
- Minutos
- </div>
- `;
-}
-
-setInterval(updateCountdown,1000);
-updateCountdown();
-
-const galleryPhotos = [
-
-"fotos/foto1.jpg",
-"fotos/foto2.jpg",
-"fotos/foto3.jpg",
-"fotos/foto4.jpg",
-"fotos/foto5.jpg",
-"fotos/foto6.jpg",
-"fotos/foto7.jpg",
-"fotos/foto8.jpg",
-"fotos/foto9.jpg",
-"fotos/foto10.jpg",
-"fotos/foto11.jpg",
-"fotos/foto12.jpg",
-"fotos/foto13.jpg",
-];
-
-let currentPhoto = 0;
-
-setInterval(() => {
-
- currentPhoto++;
-
- if(currentPhoto >= galleryPhotos.length){
-  currentPhoto = 0;
- }
-
- document.getElementById("galleryImage")
- .src = galleryPhotos[currentPhoto];
-
-},5000);
-
-function toggleMusic(){
-
- const music =
- document.getElementById("music");
-
- if(music.paused){
-
-  music.play();
-
- }else{
-
-  music.pause();
-
- }
-
-}
-
-</script>
+</footer>
 
 </body>
 </html>
