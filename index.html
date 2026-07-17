@@ -257,62 +257,7 @@ section{
 
 
 /* =====================================================
-   CUENTA ATRÁS
-===================================================== */
-
-
-.countdown{
-
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:20px;
-
-    margin-top:40px;
-
-}
-
-
-.time-box{
-
-    background:white;
-
-    width:130px;
-
-    padding:25px 10px;
-
-    border-radius:20px;
-
-    box-shadow:var(--sombra);
-
-}
-
-
-.time-box span{
-
-    display:block;
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:55px;
-
-    color:var(--oro);
-
-}
-
-
-.time-box small{
-
-    font-size:14px;
-
-    text-transform:uppercase;
-
-    letter-spacing:2px;
-
-}
+   
 
 
 /* =====================================================
@@ -401,36 +346,6 @@ Gracias por acompañarnos en este momento tan especial pero, sobre todo, por vue
 </header>
 
 
-
-<!-- =====================================================
-     CUENTA ATRÁS
-===================================================== -->
-
-<section>
-
-<div class="container">
-
-<h2 class="titulo">
-    La cuenta atrás comienza
-</h2>
-
-
-<div class="countdown">
-
-
-<div class="time-box">
-<span id="días">0</span>
-<small>días</small>
-</div>
-
-
-
-
-</div>
-
-</div>
-
-</section>
 
 
 
@@ -1055,83 +970,6 @@ Nos vemos en Ibiza
 ===================================================== -->
 
 <script>
-
-
-/* =====================================================
-   CUENTA ATRÁS
-===================================================== */
-
-
-const fechaBoda = new Date(
-  2026,
-  8,
-  12,
-  12,
-  30,
-  0
-).getTime();
-
-function actualizarCuentaAtras() {
-  const ahora = new Date().getTime();
-  const diferencia = fechaBoda - ahora;
-
-  if (diferencia <= 0) {
-    document.getElementById("días").innerHTML = "0";
-    
-    return;
-  }
-
-  const días = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-  
-
-  document.getElementById("días").innerHTML = días;
-  
-}
-
-actualizarCuentaAtras();
-setInterval(actualizarCuentaAtras, 1000);
-
-
-
-function actualizarCuenta(){
-
-    const ahora = new Date().getTime();
-
-    const diferencia = fechaBoda - ahora;
-
-
-    if(diferencia < 0){
-
-        document.getElementById("días").innerHTML="0";
-        
-
-        return;
-
-    }
-
-
-    const días = Math.floor(
-        diferencia /
-        (1000 * 60 * 60 * 24)
-    );
-
-
-   
-
-
-
-    document.getElementById("días").innerHTML=días;
-
-    
-
-
-}
-
-
-
-setInterval(actualizarCuenta,1000);
-
-actualizarCuenta();
 
 
 
