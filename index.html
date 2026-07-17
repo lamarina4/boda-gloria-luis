@@ -420,26 +420,10 @@ Gracias por acompañarnos en este momento tan especial pero, sobre todo, por vue
 
 <div class="time-box">
 <span id="dias">0</span>
-<small>días</small>
+<small>dias</small>
 </div>
 
 
-<div class="time-box">
-<span id="horas">0</span>
-<small>horas</small>
-</div>
-
-
-<div class="time-box">
-<span id="minutos">0</span>
-<small>minutos</small>
-</div>
-
-
-<div class="time-box">
-<span id="segundos">0</span>
-<small>segundos</small>
-</div>
 
 
 </div>
@@ -1092,17 +1076,15 @@ function actualizarCuentaAtras() {
   const diferencia = fechaBoda - ahora;
 
   if (diferencia <= 0) {
-    document.getElementById("días").innerHTML = "0";
+    document.getElementById("dias").innerHTML = "0";
     
     return;
   }
 
   const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-  const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-  const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+  
 
-  document.getElementById("días").innerHTML = días;
+  document.getElementById("dias").innerHTML = dias;
   
 }
 
@@ -1120,7 +1102,7 @@ function actualizarCuenta(){
 
     if(diferencia < 0){
 
-        document.getElementById("días").innerHTML="0";
+        document.getElementById("dias").innerHTML="0";
         
 
         return;
@@ -1134,32 +1116,11 @@ function actualizarCuenta(){
     );
 
 
-    const horas = Math.floor(
-        (diferencia %
-        (1000 * 60 * 60 * 24))
-        /
-        (1000 * 60 * 60)
-    );
-
-
-    const minutos = Math.floor(
-        (diferencia %
-        (1000 * 60 * 60))
-        /
-        (1000 * 60)
-    );
-
-
-    const segundos = Math.floor(
-        (diferencia %
-        (1000 * 60))
-        /
-        1000
-    );
+   
 
 
 
-    document.getElementById("días").innerHTML=días;
+    document.getElementById("dias").innerHTML=dias;
 
     
 
